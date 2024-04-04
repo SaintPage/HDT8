@@ -21,7 +21,9 @@ public class Main {
                     while ((paciente = hospital.siguientePaciente()) != null) {
                         System.out.println("Atendiendo a: " + paciente);
                     }
-                    break;
+                System.out.println("Todos los pacientes han sido atendidos con total éxito. Volviendo a ordenar...");
+                LectorPacientes.cargarPacientes(hospital, "pacientes.txt");
+                break;
                 case "2":
                     continuar = false;
                     break;
@@ -31,6 +33,6 @@ public class Main {
         }
 
         scanner.close();
-        System.out.println("Gracias por usar el sistema de atención de pacientes, hostial UVG.");
+        System.out.println("Gracias por usar el sistema de atención de pacientes, hospital UVG.");
     }
 }
